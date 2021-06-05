@@ -1,0 +1,96 @@
+:root {
+  --fnt-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  --main--color: crimson;
+}
+
+/* Start players */
+.players-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.players-wrapper :is(.player-one) {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--fnt-family);
+  border: 1px solid #444;
+  height: 250px;
+  padding: 40px;
+  width: 150px;
+}
+:is(.player-one, .player-two) .player-info {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+:is(.player-one, .player-two) .player-info h3 {
+  margin: 0 0 5px;
+}
+:is(.player-one, .player-two) .player-info .active:empty {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: auto;
+  background-color: var(--main--color);
+}
+:is(.player-one, .player-two) .player-info .no-active:empty {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: auto;
+  background-color: gray;
+}
+:is(.player-one, .player-two) .score {
+  position: relative;
+}
+:is(.player-one, .player-two) .score .randome-dice-score {
+  position: absolute;
+  top: -30px;
+  left: 65px;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  display: block;
+  font-size: 10px;
+  text-align: center;
+  background-color: var(--main--color);
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+}
+:is(.player-one, .player-two) .score .current-score {
+  height: 40px;
+  width: 40px;
+  display: block;
+  font-size: 25px;
+  background-color: var(--main--color);
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  padding: 20px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+:is(.player-one, .player-two) .run-btn {
+  margin-top: 5px;
+}
+:is(.player-one, .player-two) .run-btn button {
+  width: 100px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: var(--main--color);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.players-wrapper .dice {
+  position: absolute;
+}
+/* End players */

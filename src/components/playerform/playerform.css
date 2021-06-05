@@ -1,0 +1,60 @@
+:root {
+  --fnt-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  --main--color: crimson;
+}
+/* Start from  */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100% !important;
+}
+#form {
+  padding: 25px;
+  width: 380px !important;
+  background-color: whitesmoke;
+  border: 1px solid #444;
+}
+#form h1 {
+  font-family: var(--fnt-family);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#form .input-group {
+  padding: 10px;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center;
+}
+#form .input-group label {
+  font-family: var(--fnt-family);
+  font-weight: 500;
+}
+#form .input-group input {
+  padding: 10px;
+}
+#form input[type="submit"] {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--main--color);
+  padding: 10px;
+  border: 0;
+  color: wheat;
+  margin: 10px auto;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#form .valid-form {
+  text-align: center;
+  font-family: var(--fnt-family);
+  font-size: 14px;
+  background: #34ec1cb0;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+/* End form */
