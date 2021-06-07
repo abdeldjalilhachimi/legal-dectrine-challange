@@ -1,65 +1,124 @@
 import React from "react";
 import "./dice.css";
 
-const Dice = ({ randomNumber }) => {
+const Dice = ({ randomNumberOne, randomNumberTwo }) => {
   return (
     <div className="dice">
-      {randomNumber === 1 ? (
-        <div class="dice first-face">
-          <span class="dot"></span>
+      {randomNumberOne === 1 ? (
+        <div className="dice first-face">
+          <span className="dot"></span>
         </div>
       ) : null}
-      {randomNumber === 2 ? (
-        <div class="dice second-face">
-          <span class="dot"></span>
-          <span class="dot"></span>
+      {randomNumberTwo === 1 ? (
+        <div className="dice first-face">
+          <span className="dot"></span>
         </div>
       ) : null}
-      {randomNumber === 3 ? (
-        <div class="dice third-face">
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
+      {randomNumberOne === 2 ? (
+        <div className="dice second-face">
+          <span className="dot"></span>
+          <span className="dot"></span>
         </div>
       ) : null}
-      {randomNumber === 4 ? (
-        <div class="fourth-face dice">
-          <div class="column">
-            <span class="dot"></span>
-            <span class="dot"></span>
+      {randomNumberTwo === 2 ? (
+        <div className="dice second-face">
+          <span className="dot"></span>
+          <span className="dot"></span>
+        </div>
+      ) : null}
+      {randomNumberOne === 3 ? (
+        <div className="dice third-face">
+          <span className="dot"></span>
+          <span className="dot"></span>
+          <span className="dot"></span>
+        </div>
+      ) : null}
+      {randomNumberTwo === 3 ? (
+        <div className="dice third-face">
+          <span className="dot"></span>
+          <span className="dot"></span>
+          <span className="dot"></span>
+        </div>
+      ) : null}
+      {randomNumberOne === 4 ? (
+        <div className="fourth-face dice">
+          <div className="column">
+            <span className="dot"></span>
+            <span className="dot"></span>
           </div>
-          <div class="column">
-            <span class="dot"></span>
-            <span class="dot"></span>
+          <div className="column">
+            <span className="dot"></span>
+            <span className="dot"></span>
           </div>
         </div>
       ) : null}
-      {randomNumber === 5 ? (
-        <div class="fifth-face dice">
-          <div class="column">
-            <span class="dot"></span>
-            <span class="dot"></span>
+      {randomNumberTwo === 4 ? (
+        <div className="fourth-face dice">
+          <div className="column">
+            <span className="dot"></span>
+            <span className="dot"></span>
           </div>
-          <div class="column">
-            <span class="dot"></span>
-          </div>
-          <div class="column">
-            <span class="dot"></span>
-            <span class="dot"></span>
+          <div className="column">
+            <span className="dot"></span>
+            <span className="dot"></span>
           </div>
         </div>
       ) : null}
-      {randomNumber === 6 ? (
-        <div class="sixth-face dice">
-          <div class="column">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+      {randomNumberOne === 5 ? (
+        <div className="fifth-face dice">
+          <div className="column">
+            <span className="dot"></span>
+            <span className="dot"></span>
           </div>
-          <div class="column">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+          <div className="column">
+            <span className="dot"></span>
+          </div>
+          <div className="column">
+            <span className="dot"></span>
+            <span className="dot"></span>
+          </div>
+        </div>
+      ) : null}
+      {randomNumberTwo === 5 ? (
+        <div className="fifth-face dice">
+          <div className="column">
+            <span className="dot"></span>
+            <span className="dot"></span>
+          </div>
+          <div className="column">
+            <span className="dot"></span>
+          </div>
+          <div className="column">
+            <span className="dot"></span>
+            <span className="dot"></span>
+          </div>
+        </div>
+      ) : null}
+      {randomNumberOne === 6 ? (
+        <div className="sixth-face dice">
+          <div className="column">
+            <span className="dot"></span>
+            <span className="dot"></span>
+            <span className="dot"></span>
+          </div>
+          <div className="column">
+            <span className="dot"></span>
+            <span className="dot"></span>
+            <span className="dot"></span>
+          </div>
+        </div>
+      ) : null}
+      {randomNumberTwo === 6 ? (
+        <div className="sixth-face dice">
+          <div className="column">
+            <span className="dot"></span>
+            <span className="dot"></span>
+            <span className="dot"></span>
+          </div>
+          <div className="column">
+            <span className="dot"></span>
+            <span className="dot"></span>
+            <span className="dot"></span>
           </div>
         </div>
       ) : null}

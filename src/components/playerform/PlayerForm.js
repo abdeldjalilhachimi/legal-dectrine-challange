@@ -5,38 +5,33 @@ import "./playerform.css";
 const PlayerForm = ({ addPlayers }) => {
   const history = useHistory();
   const [playerone, setPlayerone] = useState({
-    name:'', 
-    currentScore: 0
+    name: "",
+    currentScore: 0,
   });
-  const [playertwo, setPlayertwo] = useState({ 
-    name:'', 
-    currentScore: 0}
-  );
+  const [playertwo, setPlayertwo] = useState({
+    name: "",
+    currentScore: 0,
+  });
   const [maxscore, setMaxscore] = useState();
-  const [isValide, setIsValide] = useState(false)
+  const [isValide, setIsValide] = useState(false);
   const handelSubmit = (e) => {
     e.preventDefault();
-       setIsValide(true)
-       // make sure you send max score 
-      addPlayers([ playerone, playertwo ] );
-      console.log("data:", playerone, playertwo,  maxscore);
-     setTimeout(()=> {
+    setIsValide(true);
+    // make sure you send max score
+    addPlayers([playerone, playertwo]);
+    console.log("data:", playerone, playertwo, maxscore);
+    setTimeout(() => {
       history.push("/game");
-     }, 1500)
-  
+    }, 1500);
   };
   return (
     /* Start Gmae Player info */
     <div className="container">
-    
       <div className="player-info">
-
         <form id="form" onSubmit={handelSubmit}>
-        {
-         isValide? <div className="valid-form" >
-         Waiting for redirection...
-         </div> : null
-       }
+          {isValide ? (
+            <div className="valid-form">Waiting for redirection...</div>
+          ) : null}
           <h1> Game Setting </h1>
           {/* Player one  */}
           <div className="input-group">
@@ -45,18 +40,22 @@ const PlayerForm = ({ addPlayers }) => {
               type="text"
               name="playerone"
               value={playerone.name}
-              onChange={(e) => setPlayerone({name:e.target.value, currentScore: 0})}
+              onChange={(e) =>
+                setPlayerone({ name: e.target.value, currentScore: 0 })
+              }
               placeholder="Type you name"
             />
           </div>
           {/* Player Two */}
           <div className="input-group">
-            <label> Player 1</label>
+            <label> Player 2</label>
             <input
               type="text"
               name="playeetwo"
               value={playertwo.name}
-              onChange={(e) => setPlayertwo({name:e.target.value, currentScore: 0})}
+              onChange={(e) =>
+                setPlayertwo({ name: e.target.value, currentScore: 0 })
+              }
               placeholder="Type you name"
             />
           </div>
@@ -68,6 +67,7 @@ const PlayerForm = ({ addPlayers }) => {
               type="number"
               name="maxscroe"
               value={maxscore}
+              defaultValue="25"
               min="15"
               onChange={(e) => setMaxscore(e.target.value)}
               placeholder="Type max scroe"
