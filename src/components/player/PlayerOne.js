@@ -1,14 +1,15 @@
+import Winer from "../winer/Winer";
 const Player = ({
   name,
   score,
   defalutName,
   handelClick,
   diceScore,
-  randomThrow,
   playerTurn,
+  totalScore,
+  maxScore,
   style,
 }) => {
-  console.log("PlayerTurn1:", playerTurn, style);
   return (
     <div className="player-one">
       <div className={playerTurn ? `${style?.overly}` : " "}></div>
@@ -46,6 +47,9 @@ const Player = ({
           Run
         </button>
       </div>
+      {totalScore >= maxScore ? (
+        <Winer winerName={name ? name : `${defalutName}`}   />
+      ) : null}
     </div>
   );
 };

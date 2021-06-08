@@ -1,16 +1,16 @@
 import React from "react";
-
+import Winer from "../winer/Winer";
 const Player = ({
   name,
   score,
   defalutName,
   handelClick,
   diceScore2,
-  randomThrow,
   playerTurn,
+  totalScore,
+  maxScore,
   style,
 }) => {
-  console.log("playerTurn2:", playerTurn, style);
   return (
     <div className="player-one">
       <div className={playerTurn ? `${style?.overly}` : " "}></div>
@@ -48,6 +48,9 @@ const Player = ({
           Run
         </button>
       </div>
+      {totalScore >= maxScore ? (
+        <Winer winerName={name ? name : `${defalutName}`} />
+      ) : null}
     </div>
   );
 };

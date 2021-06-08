@@ -18,11 +18,11 @@ const PlayerForm = ({ addPlayers }) => {
     e.preventDefault();
     setIsValide(true);
     // make sure you send max score
-    addPlayers([playerone, playertwo]);
+    addPlayers([playerone, playertwo, maxscore]);
     console.log("data:", playerone, playertwo, maxscore);
     setTimeout(() => {
       history.push("/game");
-    }, 1500);
+    }, 1000);
   };
   return (
     /* Start Gmae Player info */
@@ -67,7 +67,6 @@ const PlayerForm = ({ addPlayers }) => {
               type="number"
               name="maxscroe"
               value={maxscore}
-              defaultValue="25"
               min="15"
               onChange={(e) => setMaxscore(e.target.value)}
               placeholder="Type max scroe"
